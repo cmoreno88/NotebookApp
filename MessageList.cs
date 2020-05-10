@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 namespace NotebookApp
 {
     //A list of TextualMessages
-    class MessageList : TextualMessage      //inherits from TextualMessage, who inherits from IPageable
+    class MessageList : TextualMessage                      //inherits from TextualMessage, who inherits from IPageable
     {
+
         private enum BulletType { Dashed, Numbered, Star}
-        private BulletType bulletType;
+        private BulletType bulletType;                     //bullettype field 
+
+
+        //Define later
+        public override IPageable Input()
+        {
+            return this;
+        }
     }
 }
