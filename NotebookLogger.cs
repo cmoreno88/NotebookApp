@@ -60,6 +60,7 @@ namespace NotebookApp {
             Console.WriteLine(output);
         }
 
+        //Events
         private void Attach() {
             trackedNotebook.ItemAdded += PrintAdded;
             trackedNotebook.ItemRemoved += PrintDeleted;
