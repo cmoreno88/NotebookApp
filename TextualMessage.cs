@@ -16,7 +16,7 @@ namespace NotebookApp
         protected PageData myData;
         protected string message;
         
-        //DEFINE LATER, just have them put in place for now
+        
         /*
         page data input method
         must be virtual so child classes
@@ -24,14 +24,25 @@ namespace NotebookApp
         */
         public virtual IPageable Input()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Please input your name:");
+            myData.author = Console.ReadLine();
+            Console.WriteLine("Please input the message title:");
+            myData.title = Console.ReadLine();
+            Console.WriteLine("Please input the message:");
+            message = Console.ReadLine();
+            return this;
         }
 
 
         //page data output method
         public void Output()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("//-------------------Message----------------\\");
+            Console.WriteLine(" Title: " + myData.title);
+            Console.WriteLine(" Author: "+ myData.author);
+            Console.WriteLine(" Message: \n \n" + message);
+            Console.WriteLine("\\-------------------------------------------//");
         }
 
         //property that allows for the setting & getting of page data
